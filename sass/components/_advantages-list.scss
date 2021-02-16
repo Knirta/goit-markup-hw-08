@@ -8,10 +8,16 @@
 }
 
 .advantages-list__item {
-  flex-basis: calc((100% - 3 * #{$grid-gap}) / 4);
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 3 * #{$grid-gap}) / 4);
 
-  & + & {
-    margin-left: #{$grid-gap};
+    & + & {
+      margin-left: #{$grid-gap};
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-basis($grid-gap, 4);
   }
 }
 

@@ -3,3 +3,7 @@
   transition-duration: $transition-duration;
   transition-timing-function: $transition-timing-function;
 }
+
+@mixin flex-basis($gap, $columns-number) {
+  flex-basis: calc((100% - ($columns-number - 1) * #{$gap}) / $columns-number);
+}

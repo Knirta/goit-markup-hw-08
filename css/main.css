@@ -569,13 +569,21 @@ img {
   }
 }
 
-.advantages-list__item {
-  -ms-flex-preferred-size: calc((100% - 3 * 30px) / 4);
-      flex-basis: calc((100% - 3 * 30px) / 4);
+@media screen and (min-width: 768px) {
+  .advantages-list__item {
+    -ms-flex-preferred-size: calc((100% - 3 * 30px) / 4);
+        flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+  .advantages-list__item + .advantages-list__item {
+    margin-left: 30px;
+  }
 }
 
-.advantages-list__item + .advantages-list__item {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .advantages-list__item {
+    -ms-flex-preferred-size: calc((100% - ($colums-number - 1) * 30px) / $colums-number);
+        flex-basis: calc((100% - ($colums-number - 1) * 30px) / $colums-number);
+  }
 }
 
 .advantages-list__icon-wrapper {
