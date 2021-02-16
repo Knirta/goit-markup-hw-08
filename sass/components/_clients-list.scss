@@ -2,23 +2,30 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+  margin-top: -$grid-gap;
+  margin-left: -$grid-gap;
 }
 
 .clients-list__item {
-  flex-basis: calc((100% - 5 * #{$grid-gap}) / 6);
+  @include flex-column(2, $grid-gap);
+
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
   @include transition(border-color);
 
-  & + & {
-    margin-left: $grid-gap;
-  }
-
   &:hover,
   &:focus {
     border-color: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include flex-column(3, $grid-gap);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-column(6, $grid-gap);
   }
 }
 

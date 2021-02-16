@@ -4,6 +4,11 @@
   transition-timing-function: $transition-timing-function;
 }
 
-@mixin flex-basis($gap, $columns-number) {
-  flex-basis: calc((100% - ($columns-number - 1) * #{$gap}) / $columns-number);
+@mixin flex-column($columns-number, $gap) {
+  flex-basis: calc((100% - #{$columns-number} * #{$gap}) / #{$columns-number});
+
+  & {
+    margin-top: $gap;
+    margin-left: $gap;
+  }
 }

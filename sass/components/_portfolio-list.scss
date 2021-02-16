@@ -1,18 +1,22 @@
 .portfolio-list {
   @extend %list;
-  margin-top: calc(-1 * #{$grid-gap});
-  margin-left: calc(-1 * #{$grid-gap});
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -$grid-gap;
+    margin-left: -$grid-gap;
   }
 }
 
 .portfolio-list__item {
-  flex-basis: calc(100% / 3 - #{$grid-gap});
-  margin-top: $grid-gap;
-  margin-left: $grid-gap;
+  @media screen and (min-width: 768px) {
+    @include flex-column(2, $grid-gap);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-column(3, $grid-gap);
+  }
 }
 
 .portfolio-list__link {

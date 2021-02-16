@@ -4,20 +4,18 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -$grid-gap;
+    margin-left: -$grid-gap;
   }
 }
 
 .advantages-list__item {
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 3 * #{$grid-gap}) / 4);
-
-    & + & {
-      margin-left: #{$grid-gap};
-    }
+    @include flex-column(2, $grid-gap);
   }
 
   @media screen and (min-width: 1200px) {
-    @include flex-basis($grid-gap, 4);
+    @include flex-column(4, $grid-gap);
   }
 }
 
