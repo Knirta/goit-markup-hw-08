@@ -1,6 +1,7 @@
 .clients-list {
   @extend %list;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .clients-list__item {

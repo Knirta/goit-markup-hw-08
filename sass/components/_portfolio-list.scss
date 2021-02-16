@@ -1,9 +1,12 @@
 .portfolio-list {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
   margin-top: calc(-1 * #{$grid-gap});
   margin-left: calc(-1 * #{$grid-gap});
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .portfolio-list__item {

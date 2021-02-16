@@ -1,6 +1,10 @@
 .activities-list {
   @extend %list;
-  display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .activities-list__item {
