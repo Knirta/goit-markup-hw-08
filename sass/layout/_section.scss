@@ -1,5 +1,6 @@
 .section {
-  @extend %section-paddings;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &--no-top-padding {
     padding-top: 0;
@@ -7,5 +8,10 @@
 
   &--secondary-background {
     background-color: $secondary-background-color;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
