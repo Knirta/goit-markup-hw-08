@@ -1,3 +1,7 @@
+.header {
+  position: relative;
+}
+
 .header--border-bottom {
   border-bottom: 1px solid #ececec;
 }
@@ -16,4 +20,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.menu-container {
+  background: #ffffff;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.menu-container.is-open {
+  display: block;
 }
