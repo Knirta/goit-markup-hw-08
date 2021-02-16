@@ -10,6 +10,12 @@
     background-color: $secondary-background-color;
   }
 
+  &--secondary-content {
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;

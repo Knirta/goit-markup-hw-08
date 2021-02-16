@@ -1,12 +1,10 @@
 .activities-list {
   @extend %list;
 
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -$grid-gap;
-    margin-left: -$grid-gap;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -$grid-gap;
+  margin-left: -$grid-gap;
 }
 
 .activities-list__item {

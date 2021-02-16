@@ -385,11 +385,17 @@ img {
 
 .logo {
   display: block;
-  margin-right: 93px;
   color: #000000;
   font-family: 'Raleway', sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    margin-right: 93px;
+  }
 }
 
 .logo span {
@@ -525,7 +531,6 @@ img {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -625,16 +630,14 @@ img {
   line-height: 2;
 }
 
-@media screen and (min-width: 768px) {
-  .activities-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
-  }
+.activities-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .activities-list__item {
@@ -906,6 +909,7 @@ img {
 
 .modal {
   width: 450px;
+  max-width: 100%;
   padding: 40px;
   border-radius: 4px;
   position: absolute;
@@ -1271,8 +1275,24 @@ img {
   line-height: 1.88;
 }
 
-.foot-contacts {
-  margin-right: 70px;
+@media screen and (max-width: 1199px) {
+  .foot-contacts {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .foot-contacts {
+    margin-right: 70px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .foot-contacts {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 
 .foot-contacts__logo {
@@ -1286,7 +1306,13 @@ img {
 }
 
 .foot-contacts__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .foot-contacts__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .foot-contacts__link {
@@ -1382,6 +1408,12 @@ img {
   background-color: #f5f4fa;
 }
 
+@media screen and (max-width: 1199px) {
+  .section--secondary-content {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
@@ -1396,7 +1428,7 @@ img {
   padding-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1407,22 +1439,70 @@ img {
   }
 }
 
-.footer__join-us {
-  padding-top: 12px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__join-us {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__join-us {
+    padding-top: 12px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__join-us {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    padding-top: 5px;
+  }
 }
 
 .footer__caption {
-  display: inline-block;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-.footer__mailing {
-  padding-top: 12px;
-  margin-left: auto;
+@media screen and (max-width: 1199px) {
+  .footer__caption {
+    display: block;
+    text-align: center;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .footer__caption {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__mailing {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__mailing {
+    padding-top: 12px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .footer__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1431,7 +1511,6 @@ img {
 }
 
 .footer__form-input {
-  width: 358px;
   padding: 15px 16px;
   margin-right: 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1462,5 +1541,19 @@ img {
 .footer__form-input::placeholder {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__form-input {
+    width: 450px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__form-input {
+    width: 358px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
