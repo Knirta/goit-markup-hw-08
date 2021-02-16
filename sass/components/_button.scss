@@ -1,0 +1,34 @@
+.button {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 4px;
+
+  background-color: $accent-color;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.88;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button--with-icon {
+  position: relative;
+  padding-right: 62px;
+  text-align: right;
+}
+
+.button__icon {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  fill: currentColor;
+}

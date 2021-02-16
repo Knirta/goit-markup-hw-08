@@ -1,0 +1,23 @@
+.foot-contacts {
+  margin-right: 70px;
+}
+
+.foot-contacts__logo {
+  @extend .logo;
+  margin-bottom: 20px;
+  margin-right: 0;
+  color: $primary-background-color;
+}
+
+.foot-contacts__item {
+  font-style: normal;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.foot-contacts__link {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+}
