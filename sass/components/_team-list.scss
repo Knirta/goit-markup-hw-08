@@ -1,4 +1,5 @@
 .team-list {
+  @extend %list;
   display: flex;
 }
 

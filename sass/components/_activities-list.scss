@@ -1,4 +1,5 @@
 .activities-list {
+  @extend %list;
   display: flex;
 }
 

@@ -1,6 +1,5 @@
-@import './header-link';
-
 .auth-nav {
+  @extend %list;
   margin-left: auto;
   display: flex;
 }
@@ -12,11 +11,12 @@
 }
 
 .auth-nav__link {
-  @extend .header-link;
+  @extend %header-link;
   display: flex;
   align-items: center;
 
   color: $primary-text-color;
+  @include transition(color);
 
   &:hover,
   &:focus {

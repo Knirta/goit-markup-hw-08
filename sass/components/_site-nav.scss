@@ -1,6 +1,5 @@
-@import './header-link';
-
 .site-nav {
+  @extend %list;
   display: flex;
 }
 
@@ -11,10 +10,11 @@
 }
 
 .site-nav__link {
-  @extend .header-link;
+  @extend %header-link;
   display: block;
 
   color: $title-text-color;
+  @include transition(color);
 
   &:hover,
   &:focus {
