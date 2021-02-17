@@ -127,11 +127,12 @@
 }
 
 .modal__checkbox-text {
-  @media screen and (max-width: 767px) {
-    font-size: 12px;
-  }
-  font-size: $font-size;
+  font-size: 12px;
   line-height: 1.71;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .modal__conditions {

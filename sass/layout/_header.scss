@@ -16,18 +16,29 @@
 }
 
 .header__main-nav {
-  min-height: 60px;
+  @media screen and (max-width: 767px) {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  min-height: 80px;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.network-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .menu-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #fff;
   @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
     display: none;
     position: absolute;
     top: 0;
@@ -37,6 +48,10 @@
     min-height: 100vh;
     padding: 48px 40px;
   }
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .menu-container.is-open {
