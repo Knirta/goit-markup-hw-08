@@ -1,0 +1,66 @@
+.network-nav {
+  @extend %list;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+}
+
+.network-nav__item {
+  @media screen and (max-width: 767px) {
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & + & {
+      margin-left: 50px;
+    }
+  }
+}
+
+.network-nav__link {
+  @extend %header-link;
+  display: flex;
+  align-items: center;
+
+  color: $primary-text-color;
+  @include transition(color);
+
+  @media screen and (max-width: 767px) {
+    &--tel {
+      font-size: 34px;
+      line-height: 1.18;
+      color: $accent-color;
+    }
+
+    &--mail {
+      font-size: 24px;
+      line-height: 1.17;
+      color: $primary-text-color;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.network-nav__icon {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  margin-right: 10px;
+  fill: currentColor;
+}

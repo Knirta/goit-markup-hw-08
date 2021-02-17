@@ -7,8 +7,17 @@
   border: none;
   background-color: transparent;
 
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
   @media screen and (min-width: 768px) {
     display: none;
+  }
+
+  .icon {
+    fill: currentColor;
   }
 }
 

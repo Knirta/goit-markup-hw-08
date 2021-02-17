@@ -1,0 +1,26 @@
+.social-networks {
+  @extend %list;
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__item {
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &:not(:last-child) {
+      border-right: 1px solid $accent-color;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 1.22;
+    font-weight: 500;
+    color: $accent-color;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+  }
+}
