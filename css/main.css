@@ -639,13 +639,14 @@ img {
 
 .menu-button {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
+  color: #000000;
   background-color: transparent;
 }
 
@@ -1051,6 +1052,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 4;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   -webkit-transition-property: opacity, -webkit-transform;
@@ -1233,6 +1235,12 @@ img {
   line-height: 1.71;
 }
 
+@media screen and (max-width: 767px) {
+  .modal__checkbox-text {
+    font-size: 12px;
+  }
+}
+
 .modal__conditions {
   text-decoration: underline;
   color: #2196f3;
@@ -1242,6 +1250,7 @@ img {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 3;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -1534,6 +1543,7 @@ img {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     width: 100%;
     min-height: 100vh;
     padding: 48px 40px;

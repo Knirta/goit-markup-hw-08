@@ -7,6 +7,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 4;
   transform: translate(-50%, -50%) scale(1);
   @include transition(opacity, transform);
 
@@ -126,6 +127,9 @@
 }
 
 .modal__checkbox-text {
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
   font-size: $font-size;
   line-height: 1.71;
 }
