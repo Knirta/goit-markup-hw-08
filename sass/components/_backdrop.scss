@@ -10,6 +10,13 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   @include transition(opacity);
+
+  @media screen and (max-width: 767px) {
+    & {
+      padding: 90px 15px;
+      overflow-y: scroll;
+    }
+  }
 }
 
 .backdrop--is-hidden {
@@ -17,7 +24,15 @@
   pointer-events: none;
 
   & .modal {
-    transform: scale(1.1) translate(-50%, -50%);
+    transform: translateX(-100%);
     opacity: 0;
+
+    @media screen and (min-width: 768px) {
+      transform: scale(1.1) translate(-50%, -50%);
+    }
   }
+}
+
+body.modal-open {
+  overflow: hidden;
 }

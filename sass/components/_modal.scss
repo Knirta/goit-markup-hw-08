@@ -1,14 +1,12 @@
 .modal {
+  position: relative;
   width: 450px;
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 40px;
   border-radius: 4px;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 4;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateX(0);
   @include transition(opacity, transform);
 
   background-color: #ffffff;
@@ -16,8 +14,13 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   opacity: 1;
 
-  @media screen and (max-width: 1199px) {
-    max-height: 100vh;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+
+    transform: translate(-50%, -50%) scale(1);
   }
 
   @media screen and (min-width: 1200px) {
