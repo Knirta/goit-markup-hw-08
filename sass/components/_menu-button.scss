@@ -20,16 +20,18 @@
   .icon {
     fill: currentColor;
   }
+
+  .icon-close {
+    display: none;
+  }
 }
 
-.menu-button .icon-close {
-  display: none;
-}
+.menu-button.is-open {
+  .icon-close {
+    display: block;
+  }
 
-.menu-button.is-open .icon-close {
-  display: block;
-}
-
-.menu-button.is-open .icon-burger {
-  display: none;
+  .icon-burger {
+    display: none;
+  }
 }
