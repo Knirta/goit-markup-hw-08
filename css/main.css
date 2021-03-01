@@ -481,6 +481,8 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -534,6 +536,15 @@ img {
     line-height: 1.18;
     color: #2196f3;
   }
+}
+
+@media screen and (max-width: 767px) and (max-width: 376px) {
+  .network-nav__link--tel {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .network-nav__link--mail {
     font-size: 24px;
     line-height: 1.17;
@@ -580,6 +591,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -1546,12 +1559,6 @@ body.modal-open {
   border-bottom: 1px solid #ececec;
 }
 
-.header__container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 @media screen and (min-width: 768px) {
   .header__container {
     display: -webkit-box;
@@ -1559,12 +1566,16 @@ body.modal-open {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 .header__main-nav {
   min-height: 80px;
-  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1592,6 +1603,8 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1604,7 +1617,8 @@ body.modal-open {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -1626,12 +1640,11 @@ body.modal-open {
     min-height: 100vh;
     padding: 48px 40px;
   }
-}
-
-.menu-container.is-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  .menu-container.is-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .hero {

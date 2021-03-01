@@ -3,6 +3,7 @@
 
   @media screen and (max-width: 767px) {
     display: flex;
+    flex-basis: 100%;
     flex-direction: column-reverse;
     margin-bottom: 64px;
   }
@@ -44,6 +45,10 @@
       font-size: 34px;
       line-height: 1.18;
       color: $accent-color;
+
+      @media screen and (max-width: 376px) {
+        font-size: 26px;
+      }
     }
 
     &--mail {
